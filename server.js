@@ -1,5 +1,5 @@
 const express = require('express')
-
+const initDB = require('./config/db')
 const app = express()
 
 const port = 3001
@@ -31,6 +31,7 @@ app.listen(port,() => {
     console.log('La Aplicacion está en linea!');
 })
 
+initDB();
 /*Para iniciar nuestra aplicacion, haciendo uso de start, hay que modificar en el archivo
 package.json como se muestra a continuacion:
 
