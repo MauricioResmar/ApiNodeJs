@@ -1,3 +1,14 @@
+const model = require('../models/users')
+
 exports.getData = (req, res) => {
-    res.send({ data: 'Esto viene desde USER' })
+    model.find({}, (err, docs) => {
+      res.send({
+        docs
+      })
+    })
+}
+//Insertar Data de Usuarios
+exports.insertData = (req, res) => {
+    const data = req.body
+    res.send({ data })
 }

@@ -18,5 +18,11 @@ router.get(
     `/${path}`,
     controller.getData
 )
-
+/**
+ * Ruta: /user POST
+ */
+ router.post(
+    `/${path}`,
+    controller.insertData
+)
 module.exports = router
