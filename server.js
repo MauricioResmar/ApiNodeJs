@@ -22,14 +22,12 @@ app.get('/', (req, res) => {
 })*/
 //for parsing json
 app.use(express.json());
-app.use(express.urlencoded({
-    extends: true
-}));
+app.use(express.urlencoded({ extended: true }));
 //El siguiente app.use se uso con body-parser para formatear la información json enviada 
 //vía metodo get y post. Posteriormente se deshabilita ya que se procede a usar app.use(express.json());
 /*app.use(
     bodyParser.json({
-        limit: '20mb'
+      limit: '20mb'
     })
     )
     //for parsing aplication/x-www-form-urlencoded

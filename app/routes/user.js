@@ -24,5 +24,5 @@ router.get(
  router.post(
     `/${path}`,
     controller.insertData
-)
+);
 module.exports = router

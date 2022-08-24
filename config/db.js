@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const DB_URI = `mongodb://127.0.0.1:27017/dbapi`
+const DB_URI = `mongodb://127.0.0.1:27017/dbApi`
 
 module.exports = () => {
 
@@ -16,7 +16,7 @@ module.exports = () => {
             if(err) {
                 console.log('DB: error !!' + err);
             } else {
-                console.log('Conexion correcta')
+                console.log('Conexion a apidb-mongo correcta')
             }
         }
     )

@@ -10,5 +10,12 @@ exports.getData = (req, res) => {
 //Insertar Data de Usuarios
 exports.insertData = (req, res) => {
     const data = req.body
-    res.send({ data })
+    model.create(data, (err, docs) => {
+      if(err){
+        console.log('Error', err);
+        res.send({ error: 'Error' }, 422)
+      }else{
+        res.send({ data: docs })
+      }
+  })
 }
