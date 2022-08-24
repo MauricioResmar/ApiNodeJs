@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose') //Mediante la libreria mongoose creamos e instanciamos nuestro esquema de datos
+const mongoosePaginate = require('mongoose-paginate-v2') //Invocamos a nuestro modulo para paginar.
 
 
 /*El modelo de usuario nos permite generar el esquema de datos en formato 
@@ -23,4 +24,5 @@ const UserSchema = new mongoose.Schema(
         timestamps: true
     }
 )
+UserSchema.plugin(mongoosePaginate)
 module.exports = mongoose.model('user', UserSchema)

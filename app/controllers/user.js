@@ -1,9 +1,23 @@
 const model = require('../models/users')
 
+/*const options = {
+    page: 1,
+    limit: 10,
+    collation: {
+      locale: 'en',
+    },
+}*/
+
+const options = {
+    page: 1,
+    limit: 3
+    };
+
+//Obtener Data de usuarios
 exports.getData = (req, res) => {
-    model.find({}, (err, docs) => {
+    model.paginate({}, options, (err, docs) => {
       res.send({
-        docs
+        items: docs
       })
     })
 }
