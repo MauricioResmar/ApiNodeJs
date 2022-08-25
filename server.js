@@ -44,7 +44,7 @@ app.use(itemsRouters)
  a correr la aplicacion por el puerto
 3000 */
 app.listen(port,() => {
-    console.log('La Aplicacion está en linea!');
+    console.log('La Aplicacion y el Server están OnLine!');
 })
 
 initDB();

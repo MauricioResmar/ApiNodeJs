@@ -17,7 +17,7 @@ que se evaluará e insertará en el literal de la plantilla.
 router.get(
     `/${path}`,
     controller.getData
-)
+);
 /**
  * Ruta: /user POST
  */
@@ -25,4 +25,21 @@ router.get(
     `/${path}`,
     controller.insertData
 );
+/**
+ * Ruta: /user PUT
+ */
+router.put(
+    //`/:id`,
+    `/${path}/:id`,
+    controller.updateSingle
+);
+/**
+ * Ruta: /user DELETE
+ */
+ router.delete(
+    // `/:id`,
+    `/${path}/:id`,
+    controller.deleteSingle
+);
+
 module.exports = router

@@ -16,7 +16,7 @@ module.exports = () => {
             if(err) {
                 console.log('DB: error !!' + err);
             } else {
-                console.log('Conexion a apidb-mongo correcta')
+                console.log('La Conexión a la base de datos dbApi-mongo ha sido exitosa. UP!')
             }
         }
     )
