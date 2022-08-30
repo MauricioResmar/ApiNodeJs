@@ -23,7 +23,7 @@ const parseId = (id) => {
     return mongoose.Types.ObjectId(id)
 } 
 
-//Obtener Data de usuarios
+//Obtener Data de usuarios, mediante metodo get
 exports.getData = (req, res) => {
     model.paginate({}, options, (err, docs) => {
       res.send({
@@ -31,7 +31,7 @@ exports.getData = (req, res) => {
       })
     })
 }
-//Insertar Data de Usuarios
+//Insertar Data de Usuarios mediante metodo post
 exports.insertData = (req, res) => {
     const data = req.body
     model.create(data, (err, docs) => {

@@ -3,8 +3,9 @@ const initDB = require('./config/db')
 const app = express()
 
 const port = 3001
-
+//Definimos las rutas a trabajar, por cada archivo necesitaremos una nueva instancia / app.use
 const userRouters = require('./app/routes/user')
+const uploadRouters = require('./app/routes/upload')
 const itemsRouters = require('./app/routes/items')
 
 
@@ -38,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
         })
         )*/
 app.use(userRouters)
+app.use(uploadRouters)
 app.use(itemsRouters)
 
 /*Ahora hay que decirle al server que se levanten y que comience
